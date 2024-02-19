@@ -122,10 +122,10 @@ default:
       optimize_hash_generation: true
     source: trino-cli                         # Optional
     user: admin
-    verify: /path/to/your/ca.crt              # Optional
+    verify:               # Optional
   # Oracle DB
-  ORACLEDB_USER: fms_svc
-  ORACLEDB_PASSWORD: HcK8T7HN
-  ORACLEDB_HOST: ec2-65-0-181-162.ap-south-1.compute.amazonaws.com
+  ORACLEDB_USER: 
+  ORACLEDB_PASSWORD: 
+  ORACLEDB_HOST: 
   ORACLEDB_PORT: 1521
-  ORACLEDB_SERVICE: ORCLCDB
+  ORACLEDB_SERVICE: 
