@@ -120,4 +120,7 @@ def export_data_to_mssql(df: DataFrame, **kwargs) -> None:
             except Exception as e:
                 print(f"Failed to insert values into Table:{table_name} - {str(e)}\n")
                         
-            
+
+# Assuming df_group is a DataFrame and you're checking within the DATA_TYPE column
+        if not df_group['DATA_TYPE'].str.contains('TIMESTAMP\(6\)').any():
+            continue

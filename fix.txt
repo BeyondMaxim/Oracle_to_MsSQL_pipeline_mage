@@ -1,0 +1,54 @@
+'S5COND', 'S5CONS', 'S5ENRS', 'S5FINL', 'S5HLTH', 'S5INDU', 'S5INFT', 'S5MATR', 'S5RLST', 'S5TELS', 'S5UTIL'
+
+
+
+IF OBJECT_ID('FMS_SVC.FMSV_ACS_RECON_REPORT', 'V') IS NOT NULL
+    DROP VIEW FMS_SVC.FMSV_ACS_RECON_REPORT;
+
+fixed table 
+Table Name: fms_fms_to_icms_tracker_stg
+Table Name: fms_otp_validation
+Table Name: fms_paynow_collection_details
+
+
+view :14,24,27,28, 32, 33, 37,43,53,71, 76, 79, 85, 93,94,96,100, 108, 109,119,129,  145  85 100   
+
+
+131, , 128 ,123  ,119, 118,112, 101,,97, 72, 69,67, 68,146, 63,62,61,60,59,  41, 40,38, 35,21,31,16,15
+
+
+24,27,28  SQL Error [209] [S0001]: Ambiguous column name 'TRANSACTION_AMOUNT'.
+
+
+
+22,BPAT.RECEIPT_NUMBER ERROR ERASE  FMSV_BAIL_JAV_TRANS_DETAILS
+
+14 FMSV_ACS_RECON_REPORT 118 FMSV_RECON_COLLECTION_DETAILS    SQL Error [1038] [S0004]: An object or column name is missing or empty. For SELECT INTO statements, verify each column has a name. For other statements, look for empty alias names. Aliases defined as "" or [] are not allowed. Change the alias to a valid name.
+
+Error position:
+32 
+
+
+
+
+
+
+FMSV_CDB_REPORT
+
+
+
+
+FMS_bailbond_trans_details table trasaction_amount  but view import it transaction_amount
+
+
+
+
+
+
+
+
+
+
+
+
+

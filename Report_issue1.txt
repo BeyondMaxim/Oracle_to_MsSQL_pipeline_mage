@@ -1,0 +1,216 @@
+I am fixed the data length issue for the vachar type.
+And I am checking the problems that you were delivered me.
+I have found many issues on the txt files that you send me.
+
+
+
+
+Failed to read FMS_AUDIT_TRAIL_DETAILS.txt:
+ 'utf-8' codec can't decode byte 0xbf in position 3241: invalid start byte
+ 
+please check the  FMS_ADMIN_AUDIT_TRAIL_DETAILS.txt file.
+then you can see there aren't values in following line.
+
+FMS_ADMIN_AUDIT_TRAIL_DETAILS -- 941 -- 834
+ line_index: 16 value: 
+ line_index: 20 value: 
+ line_index: 25 value: 
+ line_index: 32 value: 
+ line_index: 41 value: 
+ line_index: 56 value: 
+ line_index: 71 value: 
+ line_index: 87 value: 
+ line_index: 98 value: 
+ line_index: 101 value: 
+ line_index: 106 value: 
+ line_index: 110 value: 
+ line_index: 114 value: 
+ line_index: 123 value: 
+ line_index: 128 value: 
+ line_index: 132 value: 
+ line_index: 141 value: 
+ line_index: 150 value: 
+ line_index: 158 value: 
+ line_index: 200 value: 
+ line_index: 213 value: 
+ line_index: 216 value: 
+ line_index: 224 value: 
+ line_index: 231 value: 
+ line_index: 235 value: 
+ line_index: 240 value: 
+ line_index: 249 value: 
+ line_index: 254 value: 
+ line_index: 258 value: 
+ line_index: 261 value: 
+ line_index: 264 value: 
+ line_index: 271 value: 
+ line_index: 276 value: 
+ line_index: 282 value: 
+ line_index: 298 value: 
+ line_index: 301 value: 
+ line_index: 315 value: 
+ line_index: 319 value: 
+ line_index: 325 value: 
+ line_index: 333 value: 
+ line_index: 339 value: 
+ line_index: 358 value: 
+ line_index: 362 value: 
+ line_index: 375 value: 
+ line_index: 389 value: 
+ line_index: 392 value: 
+ line_index: 408 value: 
+ line_index: 447 value: 
+ line_index: 487 value: 
+ line_index: 490 value: 
+ line_index: 494 value: 
+ line_index: 498 value: 
+ line_index: 502 value: 
+ line_index: 512 value: 
+ line_index: 515 value: 
+ line_index: 532 value: 
+ line_index: 544 value: 
+ line_index: 549 value: 
+ line_index: 554 value: 
+ line_index: 566 value: 
+ line_index: 570 value: 
+ line_index: 577 value: 
+ line_index: 580 value: 
+ line_index: 584 value: 
+ line_index: 601 value: 
+ line_index: 617 value: 
+ line_index: 628 value: 
+ line_index: 642 value: 
+ line_index: 645 value: 
+ line_index: 650 value: 
+ line_index: 655 value: 
+ line_index: 664 value: 
+ line_index: 672 value: 
+ line_index: 682 value: 
+ line_index: 693 value: 
+ line_index: 701 value: 
+ line_index: 709 value: 
+ line_index: 716 value: 
+ line_index: 719 value: 
+ line_index: 723 value: 
+ line_index: 728 value: 
+ line_index: 735 value: 
+ line_index: 742 value: 
+ line_index: 747 value: 
+ line_index: 750 value: 
+ line_index: 754 value: 
+ line_index: 759 value: 
+ line_index: 765 value: 
+ line_index: 777 value: 
+ line_index: 791 value: 
+ line_index: 815 value: 
+ line_index: 819 value: 
+ line_index: 823 value: 
+ line_index: 826 value: 
+ line_index: 831 value: 
+ line_index: 835 value: 
+ line_index: 841 value: 
+ line_index: 847 value: 
+ line_index: 853 value: 
+ line_index: 861 value: 
+ line_index: 879 value: 
+ line_index: 898 value: 
+ line_index: 905 value: 
+ line_index: 909 value: 
+ line_index: 914 value: 
+ line_index: 930 value: 
+ line_index: 937 value: 
+
+ 
+FMS_AXS_EXP_INPUT_DETAILS.txt
+This file is same above and please see the first 4 lines values.
+line_index: 1 value: SELECT * FROM FMS_AXS_EXP_INPUT_DETAILS
+line_index: 2 value:               *
+line_index: 3 value: ERROR at line 1:
+line_index: 4 value: ORA-00942: table or view does not exist
+line_index: 5 value: 
+line_index: 6 value: 
+line_index: 201 value: 
+line_index: 224 value: 
+line_index: 373 value: 
+line_index: 380 value: 
+line_index: 386 value: 
+line_index: 390 value: 
+line_index: 512 value: 
+line_index: 521 value: 
+line_index: 531 value: 
+line_index: 800 value: 
+ 
+ FMS_CD_REVENUE_HEADER.txt
+ this file has the issue that last two value was crossed at following line
+    line_index: 3 value: 10060               |14-AUG-19|BACXL                                             |BSLPK                                             |14-AUG-19|13-AUG-19|14-AUG-19|APP
+    error: ('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]String or binary data would be truncated in table 'sqldb.fms_csv.fms_cd_revenue_header', column 'STATUS'. Truncated value: '14-AU'. (2628) (SQLExecDirectW)")
+    line_index: 437 value: 10062               |15-OCT-19|CHZHER                                            |BSLPK                                             |15-OCT-19|09-OCT-19|15-OCT-19|APP
+    error: ('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]String or binary data would be truncated in table 'sqldb.fms_csv.fms_cd_revenue_header', column 'STATUS'. Truncated value: '15-OC'. (2628) (SQLExecDirectW)")
+
+
+FMS_CD_REVENUE_LINE_DETAILS LINE_INDEXIN
+this file has incorrect content  for 'status' column.
+'Status' colume hase the vachar (10) In this table of the databse.
+But asigned the value on your file is longer that 10 characters
+line_index: 2137 value: 10407               |         1|CASH"|echo xlafik1f1w zgs7dcjfz1 ||               |10-MAY-21|10-MAY-21|00:00|23:59
+ error: ('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]String or binary data would be truncated in table 'sqldb.fms_csv.fms_cd_revenue_line_details', column 'REP_TO_TIME'. Truncated value: '10-MA'. (2628) (SQLExecDirectW)")
+line_index: 2153 value: 10408               |         1|CASH'|echo 0rrbepfs9m m5v3f0l7pw #xzwx            |10-MAY-21|10-MAY-21|00:00|23:59
+ error: ('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]String or binary data would be truncated in table 'sqldb.fms_csv.fms_cd_revenue_line_details', column 'REP_FROM_TIME'. Truncated value: '10-MA'. (2628) (SQLExecDirectW)")
+line_index: 2169 value: 10410               |         1|CASH|ping -c 21 127.0.0.1||x                      |10-MAY-21|10-MAY-21|00:00|23:59
+ error: ('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]String or binary data would be truncated in table 'sqldb.fms_csv.fms_cd_revenue_line_details', column 'REP_TO_TIME'. Truncated value: '10-MA'. (2628) (SQLExecDirectW)")
+line_index: 2201 value: 10412               |         1|CASH'|ping -c 21 127.0.0.1 #                      |10-MAY-21|10-MAY-21|00:00|23:59
+ error: ('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]String or binary data would be truncated in table 'sqldb.fms_csv.fms_cd_revenue_line_details', column 'REP_FROM_TIME'. Truncated value: '10-MA'. (2628) (SQLExecDirectW)")
+line_index: 2217 value: 10413               |         1|CASH"|ping -n 21 127.0.0.1 ||                     |10-MAY-21|10-MAY-21|00:00|23:59
+ error: ('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]String or binary data would be truncated in table 'sqldb.fms_csv.fms_cd_revenue_line_details', column 'REP_TO_TIME'. Truncated value: '10-MA'. (2628) (SQLExecDirectW)")
+line_index: 3122 value: 10826               |         2|CHQ"|echo 8vo48kjfrm 9t5uz2qws9 ||                |10-MAY-21|10-MAY-21|00:00|23:59
+ error: ('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]String or binary data would be truncated in table 'sqldb.fms_csv.fms_cd_revenue_line_details', column 'REP_TO_TIME'. Truncated value: '10-MA'. (2628) (SQLExecDirectW)")
+line_index: 3138 value: 10827               |         2|CHQ'|echo q2y736c3lv xbipokhrnv #xzwx             |10-MAY-21|10-MAY-21|00:00|23:59
+ error: ('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]String or binary data would be truncated in table 'sqldb.fms_csv.fms_cd_revenue_line_details', column 'REP_FROM_TIME'. Truncated value: '10-MA'. (2628) (SQLExecDirectW)")
+line_index: 3154 value: 10829               |         2|CHQ|ping -c 21 127.0.0.1||x                       |10-MAY-21|10-MAY-21|00:00|23:59
+ error: ('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]String or binary data would be truncated in table 'sqldb.fms_csv.fms_cd_revenue_line_details', column 'REP_TO_TIME'. Truncated value: '10-MA'. (2628) (SQLExecDirectW)")
+line_index: 3186 value: 10831               |         2|CHQ'|ping -c 21 127.0.0.1 #                       |10-MAY-21|10-MAY-21|00:00|23:59
+ error: ('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]String or binary data would be truncated in table 'sqldb.fms_csv.fms_cd_revenue_line_details', column 'REP_FROM_TIME'. Truncated value: '10-MA'. (2628) (SQLExecDirectW)")
+line_index: 3202 value: 10832               |         2|CHQ"|ping -n 21 127.0.0.1 ||                      |10-MAY-21|10-MAY-21|00:00|23:59
+ error: ('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]String or binary data would be truncated in table 'sqldb.fms_csv.fms_cd_revenue_line_details', column 'REP_TO_TIME'. Truncated value: '10-MA'. (2628) (SQLExecDirectW)")
+line_index: 3650 value: 11245               |         3|SCHQ"|echo cp3ggyqs8k ogvinws35x ||               |10-MAY-21|10-MAY-21|00:00|23:59
+ error: ('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]String or binary data would be truncated in table 'sqldb.fms_csv.fms_cd_revenue_line_details', column 'REP_TO_TIME'. Truncated value: '10-MA'. (2628) (SQLExecDirectW)")
+line_index: 3666 value: 11246               |         3|SCHQ'|echo 27cf7levr8 u1a83uf4ii #xzwx            |10-MAY-21|10-MAY-21|00:00|23:59
+ error: ('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]String or binary data would be truncated in table 'sqldb.fms_csv.fms_cd_revenue_line_details', column 'REP_FROM_TIME'. Truncated value: '10-MA'. (2628) (SQLExecDirectW)")
+line_index: 3682 value: 11248               |         3|SCHQ|ping -c 21 127.0.0.1||x                      |10-MAY-21|10-MAY-21|00:00|23:59
+ error: ('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]String or binary data would be truncated in table 'sqldb.fms_csv.fms_cd_revenue_line_details', column 'REP_TO_TIME'. Truncated value: '10-MA'. (2628) (SQLExecDirectW)")
+line_index: 3714 value: 11250               |         3|SCHQ'|ping -c 21 127.0.0.1 #                      |10-MAY-21|10-MAY-21|00:00|23:59
+ error: ('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]String or binary data would be truncated in table 'sqldb.fms_csv.fms_cd_revenue_line_details', column 'REP_FROM_TIME'. Truncated value: '10-MA'. (2628) (SQLExecDirectW)")
+line_index: 3730 value: 11251               |         3|SCHQ"|ping -n 21 127.0.0.1 ||                     |10-MAY-21|10-MAY-21|00:00|23:59
+ error: ('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]String or binary data would be truncated in table 'sqldb.fms_csv.fms_cd_revenue_line_details', column 'REP_TO_TIME'. Truncated value: '10-MA'. (2628) (SQLExecDirectW)")
+line_index: 5094 value: 11664               |         4|CO"|echo 9vs85wfv7q p49a37u8gr ||                 |10-MAY-21|10-MAY-21|00:00|23:59
+ error: ('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]String or binary data would be truncated in table 'sqldb.fms_csv.fms_cd_revenue_line_details', column 'REP_TO_TIME'. Truncated value: '10-MA'. (2628) (SQLExecDirectW)")
+line_index: 5110 value: 11665               |         4|CO'|echo 1gklp33i7d iz2xbh0ogx #xzwx              |10-MAY-21|10-MAY-21|00:00|23:59
+ error: ('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]String or binary data would be truncated in table 'sqldb.fms_csv.fms_cd_revenue_line_details', column 'REP_FROM_TIME'. Truncated value: '10-MA'. (2628) (SQLExecDirectW)")
+line_index: 5126 value: 11667               |         4|CO|ping -c 21 127.0.0.1||x                        |10-MAY-21|10-MAY-21|00:00|23:59
+ error: ('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]String or binary data would be truncated in table 'sqldb.fms_csv.fms_cd_revenue_line_details', column 'REP_TO_TIME'. Truncated value: '10-MA'. (2628) (SQLExecDirectW)")
+line_index: 5158 value: 11669               |         4|CO'|ping -c 21 127.0.0.1 #                        |10-MAY-21|10-MAY-21|00:00|23:59
+ error: ('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]String or binary data would be truncated in table 'sqldb.fms_csv.fms_cd_revenue_line_details', column 'REP_FROM_TIME'. Truncated value: '10-MA'. (2628) (SQLExecDirectW)")
+line_index: 5174 value: 11670               |         4|CO"|ping -n 21 127.0.0.1 ||                       |10-MAY-21|10-MAY-21|00:00|23:59
+ error: ('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]String or binary data would be truncated in table 'sqldb.fms_csv.fms_cd_revenue_line_details', column 'REP_TO_TIME'. Truncated value: '10-MA'. (2628) (SQLExecDirectW)")
+line_index: 5503 value: 12086               |         5|NETS|ping -c 21 127.0.0.1||x                      |10-MAY-21|10-MAY-21|00:00|23:59
+ error: ('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]String or binary data would be truncated in table 'sqldb.fms_csv.fms_cd_revenue_line_details', column 'REP_TO_TIME'. Truncated value: '10-MA'. (2628) (SQLExecDirectW)")
+line_index: 5535 value: 12088               |         5|NETS'|ping -c 21 127.0.0.1 #                      |10-MAY-21|10-MAY-21|00:00|23:59
+ error: ('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]String or binary data would be truncated in table 'sqldb.fms_csv.fms_cd_revenue_line_details', column 'REP_FROM_TIME'. Truncated value: '10-MA'. (2628) (SQLExecDirectW)")
+line_index: 5551 value: 12089               |         5|NETS"|ping -n 21 127.0.0.1 ||                     |10-MAY-21|10-MAY-21|00:00|23:59
+ error: ('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]String or binary data would be truncated in table 'sqldb.fms_csv.fms_cd_revenue_line_details', column 'REP_TO_TIME'. Truncated value: '10-MA'. (2628) (SQLExecDirectW)")
+line_index: 6154 value: 12502               |         6|NETSF"|echo z9xa3mkmq4 eqy7sfak6i ||              |10-MAY-21|10-MAY-21|00:00|23:59
+ error: ('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]String or binary data would be truncated in table 'sqldb.fms_csv.fms_cd_revenue_line_details', column 'REP_TO_TIME'. Truncated value: '10-MA'. (2628) (SQLExecDirectW)")
+line_index: 6170 value: 12503               |         6|NETSF'|echo a2e64u3t3y 0f7uh7znoq #xzwx           |10-MAY-21|10-MAY-21|00:00|23:59
+ error: ('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]String or binary data would be truncated in table 'sqldb.fms_csv.fms_cd_revenue_line_details', column 'REP_FROM_TIME'. Truncated value: '10-MA'. (2628) (SQLExecDirectW)")
+line_index: 6186 value: 12505               |         6|NETSF|ping -c 21 127.0.0.1||x                     |10-MAY-21|10-MAY-21|00:00|23:59
+ error: ('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]String or binary data would be truncated in table 'sqldb.fms_csv.fms_cd_revenue_line_details', column 'REP_TO_TIME'. Truncated value: '10-MA'. (2628) (SQLExecDirectW)")
+line_index: 6218 value: 12507               |         6|NETSF'|ping -c 21 127.0.0.1 #                     |10-MAY-21|10-MAY-21|00:00|23:59
+ error: ('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]String or binary data would be truncated in table 'sqldb.fms_csv.fms_cd_revenue_line_details', column 'REP_FROM_TIME'. Truncated value: '10-MA'. (2628) (SQLExecDirectW)")
+line_index: 6234 value: 12508               |         6|NETSF"|ping -n 21 127.0.0.1 ||                    |10-MAY-21|10-MAY-21|00:00|23:59
+ error: ('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]String or binary data would be truncated in table 'sqldb.fms_csv.fms_cd_revenue_line_details', column 'REP_TO_TIME'. Truncated value: '10-MA'. (2628) (SQLExecDirectW)")
+line_index: 6529 value: 12083               |         5|NETS"|echo xqmjl5a7ui 2pgqhz6f4p ||               |10-MAY-21|10-MAY-21|00:00|23:59
+ error: ('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]String or binary data would be truncated in table 'sqldb.fms_csv.fms_cd_revenue_line_details', column 'REP_TO_TIME'. Truncated value: '10-MA'. (2628) (SQLExecDirectW)")
+line_index: 6545 value: 12084               |         5|NETS'|echo qoh5kr6xy3 ozp9cjq3ao #xzwx            |10-MAY-21|10-MAY-21|00:00|23:59
+ error: ('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]String or binary data would be truncated in table 'sqldb.fms_csv.fms_cd_revenue_line_details', column 'REP_FROM_TIME'. Truncated value: '10-MA'. (2628) (SQLExecDirectW)")
+
+I  shared you some issues that I found so far, and I will let you know about another issues for another files when I find  

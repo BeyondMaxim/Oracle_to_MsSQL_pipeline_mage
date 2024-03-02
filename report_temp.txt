@@ -1,0 +1,109 @@
+'S5COND', 'S5CONS', 'S5ENRS', 'S5FINL', 'S5HLTH', 'S5INDU', 'S5INFT', 'S5MATR', 'S5RLST', 'S5TELS', 'S5UTIL'
+IF OBJECT_ID('FMS_SVC.FMSV_ACS_RECON_REPORT', 'V') IS NOT NULL
+    DROP VIEW FMS_SVC.FMSV_ACS_RECON_REPORT;
+
+fixed table 
+Table Name: fms_fms_to_icms_tracker_stg
+Table Name: fms_otp_validation
+Table Name: fms_paynow_collection_detailsview :14,24,27,28, 32,   43, 71, 79, , 108, 109,,129,  145      131, , 128 ,   63  ,38, 31, TOP 100 PERCENT24,27,28  SQL Error [209] [S0001]: Ambiguous column name 'TRANSACTION_AMOUNT'.
+22,BPAT.RECEIPT_NUMBER ERROR ERASE  FMSV_BAIL_JAV_TRANS_DETAILS
+
+14 FMSV_ACS_RECON_REPORT 118 FMSV_RECON_COLLECTION_DETAILS    SQL Error [1038] [S0004]: An object or column name is missing or empty. For SELECT INTO statements, verify each column has a name. For other statements, look for empty alias names. Aliases defined as "" or [] are not allowed. Change the alias to a valid name.
+
+Error position:
+32 fmsv_cash_bail_report  24 fmsv_bail_pa_enquiry
+71 FMSV_FD_BAIL_REPORT 24
+43
+63 mistake column selecting
+79 SOURCE SYSTEM
+
+FMSV_CDB_REPORT
+
+FMS_bailbond_trans_details table trasaction_amount  but view import it transaction_amount
+109 FMSV_PAYMENTS_TO_ACS_ACK
+
+columns_sql = ', '.join([
+        f"[{row['COLUMN_NAME']}] {row['DATA_TYPE']}{('('+str(row['DATA_LENGTH'])+')') if 'VARCHAR' in row['DATA_TYPE'].upper() or 'CHAR' in row['DATA_TYPE'].upper() else ''}"
+        for index, row in schema_df.iterrows()
+    ])
+
+KeyError: 'DATA_LENGTH'
+The above exception was the direct cause of the following exception:
+KeyError                                  Traceback (most recent call last)
+
+File /home/src/etl-demo/data_exporters/oracle_data_exporter.py:16, in <listcomp>(.0)
+
+     13 drop_table_sql = f"IF OBJECT_ID('sqldb.fms_csv.{table_name}', 'U') IS NOT NULL DROP TABLE sqldb.fms_csv.{table_name};"
+
+     14 # Adjusting column SQL creation to account for data length
+
+     15 columns_sql = ', '.join([
+
+---> 16     f"[{row['COLUMN_NAME']}] {row['DATA_TYPE']}{('('+str(row['DATA_LENGTH'])+')') if 'VARCHAR' in row['DATA_TYPE'].upper() or 'CHAR' in row['DATA_TYPE'].upper() else ''}"
+
+     17     for index, row in schema_df.iterrows()
+
+     18 ])
+
+     19 create_table_sql = f"CREATE TABLE sqldb.fms_csv.{table_name} ({columns_sql});"
+
+     20 return drop_table_sql + " " + create_table_sql
+File /usr/local/lib/python3.10/site-packages/pandas/core/series.py:981, in Series.__getitem__(self, key)
+
+    978     return self._values[key]
+
+    980 elif key_is_scalar:
+
+--> 981     return self._get_value(key)
+
+    983 if is_hashable(key):
+
+    984     # Otherwise index.get_value will raise InvalidIndexError
+
+    985     try:
+
+    986         # For labels that don't resolve as scalars like tuples and frozensetsFMS_AUDIT_TRAIL_DETAILS -- this has 28405 rows in input file, but only 3762 records in DB.
+FMS_ADMIN_AUDIT_TRAIL_DETAILS -- 941 -- 834
+FMS_BAILBOND_TRANS_DETAILS -- 932 -- 921
+FMS_USER_MASTER -- 2061 -- 1367
+FMS_PV_HEADER -- 291 -- 281
+FMS_PA_RESPONDENTS -- 14548 -- 14538
+FMS_PA_HEADER -- 13513 -- 13506
+FMS_PA_DETAILS -- 14930 -- 14925
+FMS_NOTIFICATION_PROCESS -- 3491 -- 3485
+FMS_EMAIL_DETAILS_FOR_AUDIT -- 1892 -- 1889
+FMS_PV_HEADER -- 291 -- 281 239,256,266 empty line
+FMS_PA_RESPONDENTS -- 14548 -- 14538
+FMS_PA_HEADER -- 13513 -- 13506
+FMS_PA_DETAILS -- 14930 -- 14925
+FMS_NOTIFICATION_PROCESS -- 3491 -- 3485
+FMS_EMAIL_DETAILS_FOR_AUDIT -- 1892 -- 1889
+FMS_COLLECTION_DETAILS -- 8880 -- 8875
+FMS_PV_HEADER -- 291 -- 281
+FMS_PA_RESPONDENTS -- 14548 -- 14538
+FMS_PA_HEADER -- 13513 -- 13506
+FMS_PA_DETAILS -- 14930 -- 14925
+FMS_NOTIFICATION_PROCESS -- 3491 -- 3485
+FMS_EMAIL_DETAILS_FOR_AUDIT -- 1892 -- 1889
+FMS_COLLECTION_DETAILS -- 8880 -- 8875
+FMS_CASE_DETAILS -- 3046 -- 2909
+
+ 
+
+Table Name: tmp_fms_address_details
+
+ 
+
+Failed to read TMP_FMS_ADDRESS_DETAILS.txt: [Errno 2] No such file or directory: '/home/src/********/data_exporters/../db-data/TMP_FMS_ADDRESS_DETAILS.txt'
+
+Table Name: tmp_fms_pa_details
+
+ 
+
+Failed to read TMP_FMS_PA_DETAILS.txt: [Errno 2] No such file or directory: '/home/src/********/data_exporters/../db-data/TMP_FMS_PA_DETAILS.txt'
+
+Table Name: tmp_fms_pa_header
+
+ 
+
+Failed to read TMP_FMS_PA_HEADER.txt: [Errno 2] No such file or directory: '/home/src/********/data_exporters/../db-data/TMP_FMS_PA_HEADER.txt'
